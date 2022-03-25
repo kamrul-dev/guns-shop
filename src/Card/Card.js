@@ -3,9 +3,9 @@ import './Card.css'
 import { BiCart } from 'react-icons/bi';
 
 // Card component
-const Card = ({gunData}) => {
-    const {name, img, bullet, capacity, action, price} = gunData;
-        console.log(gunData);
+const Card = ({ gunData, handleAddToCart }) => {
+    const { name, img, bullet, capacity, action, price, id } = gunData;
+
     return (
         <div className='card'>
             <div className='image-container'>
@@ -18,7 +18,7 @@ const Card = ({gunData}) => {
                 <p>Action: {action}</p>
             </div>
             <div className='add-to-cart'>
-                <button><BiCart className='icon'/></button>
+                <button onClick={() => handleAddToCart(gunData)}><BiCart className='icon' /></button>
                 <h1>$ {price}</h1>
             </div>
         </div>
