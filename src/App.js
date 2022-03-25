@@ -9,7 +9,8 @@ function App() {
   console.log(cart);
 
   const handleAddToCart = (gun) => {
-    setCart(gun);
+    const newCart = [...cart, gun];
+    setCart(newCart);
   }
 
   useEffect(() => {
@@ -20,6 +21,11 @@ function App() {
   return (
     <div>
       <Navbar />
+      <div>
+        {
+          cart.map(item => <h1 key={item.id}>{item.name}</h1>)
+        }
+      </div>
       <div className='card-container'>
         {
           guns.map(gun => <Card
