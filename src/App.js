@@ -43,9 +43,8 @@ function App() {
   }, []);
   return (
     <div>
-      <Navbar />
-      <button onClick={openModal}>Open Modal</button>
-
+      <Navbar cart={cart} openModal={openModal}/>
+      
       <div className='card-container'>
         {
           guns.map(gun => <Card
