@@ -6,7 +6,7 @@ function App() {
   const [guns, setGuns] = useState([]);
   console.log(guns);
   useEffect(() => {
-    fetch('https://raw.githubusercontent.com/mir-hussain/guns/main/data.json')
+    fetch('data.json')
       .then(res => res.json())
       .then(data => setGuns(data));
   }, []);
