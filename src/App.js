@@ -14,12 +14,14 @@ function App() {
   return (
     <div>
       <Navbar />
-      {
-        guns.map(gun => <Card
+      <div className='card-container'>
+        {
+          guns.map(gun => <Card
             key={gun.id}
-            data={gun}
+            gunData={gun}
           />)
-      }
+        }
+      </div>
     </div>
   );
 }
