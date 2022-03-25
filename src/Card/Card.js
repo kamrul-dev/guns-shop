@@ -1,5 +1,6 @@
 import React from 'react';
 import './Card.css'
+import { BiCart } from 'react-icons/bi';
 
 // Card component
 const Card = ({gunData}) => {
@@ -17,7 +18,7 @@ const Card = ({gunData}) => {
                 <p>Action: {action}</p>
             </div>
             <div className='add-to-cart'>
-                <button>Add to Cart</button>
+                <button><BiCart className='icon'/></button>
                 <h1>$ {price}</h1>
             </div>
         </div>
