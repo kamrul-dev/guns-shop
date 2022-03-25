@@ -5,6 +5,7 @@ import Navbar from './Navbar/Navbar';
 
 function App() {
   const [guns, setGuns] = useState([]);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     fetch('data.json')
